@@ -2,7 +2,7 @@ pipeline {
     agent any 
     stages {
         stage ('apply') {
-            environment {
+        environment {
                 AWS_ACCESS_KEY_ID = credetials ("ACCESS_KEY")
                 AWS_SECRET_KEY_ID = credetials ("SECRET_KEY")
             }
@@ -12,7 +12,7 @@ pipeline {
                 sh 'terraform apply -auto-approve'
             }
         }
-
+    
     }
 
 }
