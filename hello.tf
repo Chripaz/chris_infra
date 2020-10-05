@@ -6,7 +6,7 @@ provider "aws" {
   }
 
   terraform {
-         backend "s3" {
+        backend "s3" {
         bucket = "chripaz-simple-bucket"
         key = "chris.tfstate"
         region = "eu-west-1"
