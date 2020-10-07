@@ -1,10 +1,10 @@
 pipeline {
-    agent any 
+  agent any 
     stages {
-        stage ('apply') {
-        environment {
-            AWS_ACCESS_KEY_ID = credentials ("ACCESS_KEY")
-            AWS_SECRET_KEY_ID = credentials ("SECRET_KEY")
+        stage ("apply") {
+           environment {
+            AWS_ACCESS_KEY_ID = credentials("ACCESS_KEY")
+              AWS_SECRET_ACCESS_KEY = credentials ("SECRET_KEY")
             }
             steps {
              sh 'terraform init'
